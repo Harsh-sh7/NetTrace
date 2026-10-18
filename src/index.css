@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --scada-bg: #0a101d;
+    --scada-surface: #0e172a;
+    --scada-card: #14223d;
+    --scada-border: #1d3158;
+    --scada-text: #f1f5f9;
+    --scada-muted: #94a3b8;
+    --scada-subtle: #64748b;
+    --scada-accent: #00d2ff;
+  }
+
+  html.light-mode, html.light, .light {
+    --scada-bg: #f8fafc;
+    --scada-surface: #ffffff;
+    --scada-card: #f1f5f9;
+    --scada-border: #cbd5e1;
+    --scada-text: #0f172a;
+    --scada-muted: #475569;
+    --scada-subtle: #64748b;
+    --scada-accent: #2563eb;
+  }
+
+  body {
+    @apply bg-scada-bg text-scada-text antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom Scrollbars for SCADA Operations Terminal */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.7);
+}
+
+/* Animated EIGRP Dashed Edge Stroke */
+@keyframes dashdraw {
+  from {
+    stroke-dashoffset: 28;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.react-flow__edge-path {
+  transition: stroke 0.2s ease, stroke-width 0.2s ease;
+}
+
+.react-flow__handle {
+  transition: transform 0.2s ease;
+}
+
+.react-flow__handle:hover {
+  transform: scale(1.3);
+}
