@@ -386,3 +386,4 @@ export const NetTraceHeader: React.FC = () => {
     </header>
   );
 };
+
