@@ -241,3 +241,4 @@ export type ActiveScreen =
   | 'configuration' 
   | 'history' 
   | 'reports';
+
